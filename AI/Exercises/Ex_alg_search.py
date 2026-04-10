@@ -18,14 +18,15 @@ matrizDist = [
 # EJERCICIO 1
 # Dado una matriz , buscar el camino de menor longitud de Nodo a otro
 
-grafo_dist = matriz_a_grafo(matrizDist)
+grafo_dist = matriz_a_grafo(matrizDist, es_binaria=True)
+camino = bfs(grafo_dist, 'A', 'D')
+print(camino)
 
 
 
 # EJERCICIO 2
 # Dado una matriz , buscar el camino de costo mínimo de Nodo a otro
 
-
-# EJERCICIO 3
-#  8-Puzzle
-
+grafo_cost = matriz_a_grafo(matrizCost)
+camino_cost = ucs(grafo_cost, 'A', 'D')
+print(camino_cost)
